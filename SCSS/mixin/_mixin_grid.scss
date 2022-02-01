@@ -1,0 +1,55 @@
+@mixin grid_layout{
+    display: grid;
+    grid-template-columns: 3fr 6fr;
+    gap:30px;
+    margin-top: 100px;
+}
+
+.container{
+    @include grid_layout;
+}
+
+.main-heading{
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.about{
+      grid-column: 3;
+    grid-row: 1;
+}
+.side-nav{
+     grid-column: 3;
+    grid-row: 2;
+}
+
+.main-two{
+     grid-column: 4;
+    grid-row: 2;
+}
+
+
+@media all and (max-width:500px) {
+    .container{
+          grid-template-columns: 4fr;
+           margin-top: 100px;
+    }
+        .main-heading{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.about{
+      grid-column: 2;
+    grid-row: 2;
+}
+.side-nav{
+     grid-column: 3;
+    grid-row: 3;
+}
+
+.main-two{
+     grid-column: 4;
+    grid-row: 4;
+}
+}
